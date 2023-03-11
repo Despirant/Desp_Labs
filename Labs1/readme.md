@@ -56,10 +56,29 @@
   - Вводил *config terminal* 
   - Вводим *interface vlan 1*
   - Вводим *ip address 192.168.1.1 255.255.255.0*
-  
-  
-  
-   - 
+
+### Часть 3. Проверка сетевых подключений. 
+##. Шаг 1. Отображаем конфируцию коммутатора. 
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/lab1-2.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/lab1-3.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/lab1-4.PNG)
+
+## Шаг 2. Проверяем параметры vlan 1. 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/lab1-5.PNG)
+
+## Шаг 3. Пробрасываем эхо-запрос с ПК на коммутатор.
+- ping 192.168.1.1
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/lab1-6.PNG)
+
+
+## Вопросы для повторения.
+1. Пароль на VTY необходим для того, чтобы можно можно было подключиться к коммутатору по протоколу telnet.
+2. Чтобы зашифровать пароли, необходимо в режиме конфигурации ввести комманду service password-ecnryption
+
   
    
  
