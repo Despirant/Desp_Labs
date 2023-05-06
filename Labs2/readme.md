@@ -1,6 +1,7 @@
 # Домашнее задание. Базовая настройка коммутатора
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2Top.png)
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2Tablet.png)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2Tablet.PNG)
 
 ### Просмотр таблицы MAC-адресов коммутатора
  #### Задачи:
