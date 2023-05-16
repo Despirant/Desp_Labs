@@ -34,25 +34,39 @@
   - A) MAC PC0 - 000D.BDCC.711B / MAC PC2 - 0004.9AA0.D225
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC0.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2.PNG)
 
   - B) MAC SW1 - 000c.cf50.7c01 (bia 000c.cf50.7c01 / MAC SW2 - 00d0.ff99.4001 (bia 00d0.ff99.4001)
-pics/Labs2PC0.PNG
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW0Mac.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW1Mac.PNG)
   ### Шаг 2. Посмотрим таблицу MAC-адресов коммутаторов. 
   - А) подключаемся к SW2 через консоль и заходим в прив. режим (enable)
   - B) в этом режиме вводим команду "show mac address-table". После ввода команды мы можем наблюдать наличие прописанного MAC адреса нашего порта, через который идёт коммуникация со вторым коммутатором. 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacConnect.PNG)
 
   ### Шаг 3. Очистим таблицу MAC-адресов коммутатора SW2 и снова отобразим таблицу МАС-адресов. 
   - А) В привелигерованном режиме, вводим команду clear mac address-table dynamic и после этого быстро введём команду show mac address-table.
   После ввода команды мы можем наблюдать, что никаких МАС-адресов нет в нашей таблице. 
   - B) Через 10 секунд повторяем команду и наблюдаем, добавились ли МАС-адреса (да, добавились) 
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacClear.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacReConnect.PNG)
   
   ### Шаг 4. С компьютера PC-B отправим эхо-запросы устройствам в сети и просмотрим таблицу МАС-адресов коммутатора
   - А) На PC-2 откроем командную строку и введём команду arp -a и видим, что на данный момент есть только 1 MAC адрес устройства (на которым мы прописали данную команду)
   - B) С этого ПК отправляем эхо запросы "ping" на коммутаторы и на первый ПК. 
   - Убеждаемся, что все устройства дали нам ответ. 
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2Ping1-2.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2Ping11-12.PNG)
+
   - С) Подключаемся к SW2 и проверяем таблицу МАС-адресов. Мы можем видеть, что к списку добавились MAC-адреса ПК и 2-го коммутатора.
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacComplete.PNG)
   - D) Так же проверяем на PC2, появились ли дополнительные адреса (появились МАС всех сетевых устройств в нашей сети). 
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2MacComplete.PNG)
 
 
  
