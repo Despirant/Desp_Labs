@@ -34,11 +34,13 @@
   - A) MAC PC0 - 000D.BDCC.711B / MAC PC2 - 0004.9AA0.D225
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC0.png)
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2.png)
 
   - B) MAC SW1 - 000c.cf50.7c01 (bia 000c.cf50.7c01 / MAC SW2 - 00d0.ff99.4001 (bia 00d0.ff99.4001)
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW0Mac.png)
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW1Mac.png)
  
   ### Шаг 2. Посмотрим таблицу MAC-адресов коммутаторов. 
@@ -53,6 +55,7 @@
   - B) Через 10 секунд повторяем команду и наблюдаем, добавились ли МАС-адреса (да, добавились) 
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacClear.png)
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacReConnect.png)
 
   ### Шаг 4. С компьютера PC-B отправим эхо-запросы устройствам в сети и просмотрим таблицу МАС-адресов коммутатора
@@ -61,12 +64,14 @@
   - Убеждаемся, что все устройства дали нам ответ. 
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2Ping1-2.png)
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2Ping11-12.png)
 
   - С) Подключаемся к SW2 и проверяем таблицу МАС-адресов. Мы можем видеть, что к списку добавились MAC-адреса ПК и 2-го коммутатора.
   - D) Так же проверяем на PC2, появились ли дополнительные адреса (появились МАС всех сетевых устройств в нашей сети). 
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2PC2MacComplete.png)
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW2MacComplete.png)
  
  Отвечая на вопрос в конце файла - большое кол-во ARP запросов может очень сильно загрузить _всю_ сеть.
