@@ -32,6 +32,8 @@
   ### Шаг 1. Запишем MAC-адреса устройств.
   #### - Для того чтобы узнать MAC адреса на ПК, через коммандную строку вводим "ip-config all" / Для того чтобы узнать MAC адреса на коммутаторах вводим команду "show interface F0/1 "
   - A) MAC PC0 - 000D.BDCC.711B / MAC PC2 - 0004.9AA0.D225
+
+
 ![](https://github.com/Despirant/Desp_Labs/tree/main/pics/Labs2PC0.png)
 ![](https://github.com/Despirant/Desp_Labs/tree/main/pics/Labs2PC2.png)
   - B) MAC SW1 - 000c.cf50.7c01 (bia 000c.cf50.7c01 / MAC SW2 - 00d0.ff99.4001 (bia 00d0.ff99.4001)
