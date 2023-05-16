@@ -34,7 +34,7 @@
   - A) MAC PC0 - 000D.BDCC.711B / MAC PC2 - 0004.9AA0.D225
 
 
-![](https://github.com/Despirant/Desp_Labs/tree/main/pics/Labs2PC0.png)
+![](https://github.com/Despirant/Desp_Labs/tree/main/pics/Labs2PC0.PNG)
 ![](https://github.com/Despirant/Desp_Labs/tree/main/pics/Labs2PC2.png)
   - B) MAC SW1 - 000c.cf50.7c01 (bia 000c.cf50.7c01 / MAC SW2 - 00d0.ff99.4001 (bia 00d0.ff99.4001)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs2SW0Mac.png)
