@@ -31,23 +31,52 @@
  ### Часть 2. Ручная настройка IPv6-адресов
  ### Шаг 1. Назначаем IPv6-адреса интерфейсам.
  -	Назначяем глобальные индивидуальные IPv6-адреса, указанные в таблице адресации обоим интерфейсам Ethernet на R1
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4RouIntIPV6add.PNG)
  - Вводим команду Show IPv6 Int brief
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4RouIntIPV6IntBrief.PNG)
  - Вручную пишем локальные адреса канала на интерфейсах роутера
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4RouIntIPV6LinkLocal.PNG)
  - проверяем, что всё корректно.
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4RouIntIPV6ShowLocalG0.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4RouIntIPV6ShowLocalG1.PNG)
 
 Ответ на вопрос: Группа групповой рассылки на все узлы (FF02:: 1) и группа групповой рассылки на запрошенные узлы (FF02::1:FF00:1)
 
 ### Шаг 2. Активируем IPv6 маршрутизацию.
  - На PC1 вводим Ipconfig. Убеждаемся, что адреса Ipv6 не назначен
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4IpconfFirst.PNG)
  - Активируем IPv6 маршрутизацию командой IPv6 unicast-routing
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4RouIntIPV6UniCast.PNG)
  - На PC1 снова вводим ipconfig. 
+ 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4IpconfSecond.PNG)
 
 Ответ на вопрос: G0 / 0 теперь является частью группы многоадресной рассылки для всех маршрутизаторов, FF02:: 2. Это позволяет ему отправлять Router Advertisement запросы с глобальным сетевым адресом и информацией об идентификаторе подсети всем узлам локальной сети.
 
-### Шаг 3. Назначаем коммутатору IPv6 адрес для интерфейса Vlan1.
+### Шаг 3. Назначаем коммутатору IPv6 адрес для интерфейса Vlan1
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/LabsSW1IPV6Vlan1.PNG)
 ### Шаг 4. Назначаем компьютерам статические IPv6 адреса. 
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4IpconfStaticPC0.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4IpconfStaticPC2.PNG)
+
 ### Часть 3. Прокидываем эхо запросы, как прописано в задании. 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4PingR1FromPC0.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4PingSW1fromPC0.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4PingPC0fromPC1.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs4PingG0fromPC1.PNG)
  
  
 ## Ответы на "вопросы для повторения". 
