@@ -44,48 +44,58 @@
 ### Часть 2. Создание сетей Vlan и назначение порторв коммутатора. 
 #### Шаг 1. 
 - Создаём и даём название необходимым VLAN на каждом коммутаторе
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1VlanNames.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2VlanNames.PNG)
 
 - Настраиваем интерфейс управления и шлю по умолчанию
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1VlanGateWay.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2VlanGateWay.PNG)
 
 - Назначаем все неиспользуемые порты коммутатора Vlan Parking_Lot, настраиваем в статическом режиме и выключаем их.
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1Vlan999addshut.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1Vlan999addshut.PNG)
 
 
 #### Шаг 2. Назначаем сети VLAN соотвествующим интерфейсам.
 - назначаем используемые порты соответствующей Vlan и настраиваем их для статического доступа
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1VlanInterface.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2VlanInterface.PNG)
 
 - убеждаемся, что vlan назначены на правильные интерфейсы.
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1VlanAllOk.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2VlanAllOk.PNG)
 
 ### Часть 3. Конфигурация магистрального канала стандарта 802.1Q между свитчами.
 #### Шаг 1. Настраиваем магистральный интерфейс F0/1 на коммутаторах 
 - Настраиваем статический транкинг на F0/1
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1TrunkF1.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2TrunkF1.PNG)
 
 - Устанавливаем Native Vlan 1000
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1Vlan1000.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2Vlan1000.PNG)
 
 - Указываем, что 10, 20, 30 и 1000 vlan могу проходить по транку
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1TrunkAllowed.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2TrunkAllowed.PNG)
 
 - Проверяем транки, Native Vlan и разрешеные vlan через транк
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1TrunkCheck.PNG)
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S2TrunkCheck.PNG)
 
 #### Шаг 2. Настраиваем F0/5 на S1
 - Настраиваем нужный интерфейс с параметрами транка, как и на F0/1
 - Сохраняем конфиг.
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6S1F5Trunk.PNG)
  
 Ответ на доп. вопрос:  F0/5 не будет отображаться, если интерфейс g0/0/1 на маршрутизаторе отключен.
@@ -97,12 +107,13 @@
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6R1VlanConfig.PNG)
  
 - Убеждаемся, что всё работает.
+
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6R1VsoChotko.PNG)
 
 ### Часть 5. Проверяем, работает ли маршрутизация между VLAN. 
 #### Шаг1. отправляем эхо с PC-1
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs6PCApingAll.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/labs6PCApingAll.PNG)
 
 #### Шаг 2. Выполняем tracert на адрес PC-A
 
