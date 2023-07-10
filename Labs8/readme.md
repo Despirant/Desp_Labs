@@ -40,19 +40,20 @@ _____
 
 - Настраиваем интерфейсы.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1IntV6.PNG)
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R2IntV6.PNG)
 
 - Прописываем маршруты
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1IntV6Route.PNG)
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R2IntV6Route.PNG)
+
 
 - маршрутизация работает с помощью пинга адреса G0/0/1 R2 из R1
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1PingOK.PNG)
 
 _____
 
@@ -60,7 +61,7 @@ _____
 
 - Проверяем автоматическое получение IPv6 на PC-A и прописываем команду Ipconfig
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8PcaIpconfig.PNG)
 
 Ответ на вопрос: хост генерирует случайный 64-разрядный адрес
 
@@ -69,25 +70,25 @@ ___
 ### Часть 3. Часть 3. Настройка и проверка сервера DHCPv6 на R1.
 #### Шаг 1. Более подробно изучаем конфиг PC-A
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8PcaIpconfigAll.PNG)
 
 #### Шаг 2. Настроим R1 для предоставления DHCPv6 без состояния для PC-A
 
 - a.	Создадим пул DHCP IPv6 на R1 с именем R1-STATELESS
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1Stateless.PNG)
 
 - b.	Настроим интерфейс G0/0/1 на R1, чтобы предоставить флаг конфигурации OTHER для локальной сети R1.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessG001.PNG)
 
 - c. сохраним конфигурацию, перезагрузим PC-A и посмотри на изменения в ipconfig /all на PC-A.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8PcaIpconfigAllAgain.PNG)
 
 - d. Проверим подключение с помощью пинга G0/0/1 R2
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8PcaIpingR2.PNG)
 
 ___
 
@@ -95,11 +96,11 @@ ___
 
 - a.	Создадим пул DHCPv6 на R1 для сети 2001:db8:acad:3:aaa::/80
 
-место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessR2.PNG)
 
 - b. Назначим только что созданный пул DHCPv6 интерфейсу g0/0/0 на R1
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessG000.PNG)
 
 ____
 
@@ -108,7 +109,7 @@ ____
 
 #### Шаг 1. Включим PC-B и проверьте адрес SLAAC, который он генерирует
 
-место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8PcBIpconfigAll.PNG)
 
 #### Шаг 2. Настроим R2 в качестве агента DHCP-ретрансляции для локальной сети на G0/0/1
 
