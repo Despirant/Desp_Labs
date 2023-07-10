@@ -25,7 +25,7 @@
 - Используя знания полученные в предыдущих работах, создаем и настраиваем коммутаторы, используя адреса из таблица адресации.
 - Проверяем, что эхо запрос с коммутаторов работает.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7PingOK.PNG)
 
 Ответ на все 3 вопрос: да, они друг друга видят и пингуют.
 
@@ -34,35 +34,45 @@
 #### Шаг 1. Выключаем все порты
 - Используем команду Int range для облегчения процесса :)
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7Labs7S1IntShut.PNG)
 
-Место для картинки
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7Labs7S2IntShut.PNG)
+
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3IntShut.PNG)
+
 
 #### Шаг 2. Настраиваем подключенные интерфейсы как транковые. 
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1PortTrunk.PNG)
 
-Место для картинки
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/picsLabs7S2PortTrunk.PNG)
+
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3PortTrunk.PNG)
+
 
 #### Шаг 3. Включаем порты F0/2 и F0/4
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1Int24On.PNG)
 
-Место для картинки
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1Int24On.PNG)
+
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3Int24On.PNG)
+
 
 #### Шаг 4. Отобразим данные spanning tree.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1SpanningTree.PNG)
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1SpanningTree.PNG)
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3SpanningTree.PNG)
+
 
 #### Ответы на вопросы.
 - Корневым выбран S3
@@ -76,33 +86,39 @@
 #### Шаг 1. Исходя из данных, мы определили коммутатор с заблокированным портом (им является F0/2 на коммутатор S1)
 #### Шаг 2. Уменьшим стоимость корневого порта на S1. 
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1IntF4CostChange.PNG)
+
 
 #### Шаг 3. Посмотрим на результаты изменений
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1AfterChange.PNG)
 
-Место для картинки
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3AfterChange.PNG)
 
 Причина изменений заблокированного порта: STP сначала рассматривает стоимость пути. Порт с меньшей стоимостью пути всегда будет предпочтительнее порта с более высокой стоимостью пути.
 
 #### Шаг 4. Удалим стоимость порта
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1ChangeAgain.PNG)
+
 
 - Проверяем, что всё вернулось к исходным значения
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1S3AfterChange.PNG)
+
 
 ### Часть 3. Часть 4:	Наблюдение за процессом выбора протоколом STP порта, исходя из приоритета портов.
 
 - Включим порты F0/1 F0/3 на всех коммутаторах.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7F13Up.PNG)
+
 
 - Посмотрим на изменения.
 
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1S2S3IntOn.PNG)
+
 
 #### Ответы на вопросы. 
 
