@@ -34,10 +34,9 @@
 #### Шаг 1. Выключаем все порты
 - Используем команду Int range для облегчения процесса :)
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7Labs7S1IntShut.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1IntShut.PNG)
 
-
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7Labs7S2IntShut.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S2IntShut.PNG)
 
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3IntShut.PNG)
