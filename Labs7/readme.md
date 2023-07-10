@@ -47,7 +47,7 @@
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S1PortTrunk.PNG)
 
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/picsLabs7S2PortTrunk.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S2PortTrunk.PNG)
 
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7S3PortTrunk.PNG)
