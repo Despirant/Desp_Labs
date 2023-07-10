@@ -1,5 +1,5 @@
 # Лабораторная работа. Развертывание коммутируемой сети с резервными каналами
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs1Top.png)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs7Topology.png)
 ### Таблица адресации.
 
 | Устройство  |  Интерфейс | IP-адрес  |  Маска подсети |
