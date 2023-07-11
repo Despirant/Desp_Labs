@@ -2,6 +2,7 @@
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8Topology.PNG)
 
+
 ### Таблица адресации.
 
 | Устройство  | Интерфейс  | IP-адрес  | IP-адрес  | Шлюз по умолчанию  |
