@@ -53,47 +53,34 @@ _____
 
 - активируем и настроим интерфейс и подинтерфейсы
 
-Место для картинки
-
-Место для картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1IntSubint.PNG)
 
 - убеждаемся, что интерфейсы работают
 
-место для картинки
-
-#### Шаг 3. Настройка G0/1 на R2, затем G0/0/0 и статическую маршрутизацию для обоих маршрутизаторов
-
-- активируем интерфейс на маршрутизаторе
-
-Место для картинки
-
-- Настроим подинтерфейсы для каждой VLAN в соответствии с требованиями таблицы IP-адресации. Все субинтерфейсы используют инкапсуляцию 802.1Q и назначаются первый полезный адрес из вычисленного пула IP-адресов. Убеждаемся, что подинтерфейсу для native VLAN не назначен IP-адрес. Включаем описание для каждого подинтерфейса.
-
-Место для картинки
-Место для картинки
-Место для картинки
-Место для картинки
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1showintbrief.PNG)
 
 #### Шаг 4. Настройка G0/1 на R2, затем G0/0/0 и статическую маршрутизацию для обоих маршрутизаторов
 
 - Настроим g0/0/1 на R2
 
-Kartinka
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R2G1.PNG)
 
 - настроим интерфейс g0/0/0 для каждого маршрутизатора
 
-картинки
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R2G0.PNG)
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1G0.PNG)
 
 - Настроим маршрут на каждом маршрутизаторе
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1route.PNG)
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R2route.PNG)
 
 - проверяем, что всё работает и сохраняем конфиг
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1PingR2.PNG)
+
 
 #### Шаг 5. Настраиваем базовые параметры на каждом коммуникаторе
 
@@ -101,30 +88,30 @@ Kartinka
 
 - Создадим необходимые VLAN на коммутаторе 1 и присвоим им имена
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1VLAN.PNG)
 
 - Настроим и активируем интерфейс управления на S1 (VLAN 200), используя второй IP-адрес из подсети, рассчитанный ранее. Кроме того установим шлюз по умолчанию на S1.
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1vlan200nastroika.PNG)
 
 - Настроим и активируем интерфейс управления на S2 (VLAN 1), используя второй IP-адрес из подсети, рассчитанный ранее. Кроме того, установим шлюз по умолчанию на S2
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S2Vlan1.PNG)
  
 - Назначим все неиспользуемые порты S1 VLAN Parking_Lot, настроим их для статического режима доступа и административно деактивируем их. На S2 административно деактивируем все неиспользуемые порты.
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1IntShut.PNG)
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S2IntShut.PNG)
 
 #### Шаг 7. Назначьте сети VLAN соответствующим интерфейсам коммутатора.
  - Назначьте используемые порты соответствующей VLAN (указанной в таблице VLAN выше) и настройте их для режима статического доступа.
 
-картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1IntF06.PNG)
 
  - Убеждаемся, что VLAN назначены на правильные интерфейсы.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1ShowBrief.PNG)
 
 Вопрос:
 Почему интерфейс F0/5 указан в VLAN 1?
@@ -135,23 +122,17 @@ Kartinka
 
  - Измените режим порта коммутатора, чтобы принудительно создать магистральный канал.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1F05.PNG)
 
  - В рамках конфигурации транка  установите для native  VLAN значение 1000.
-
-Картинка
-
  - В качестве другой части конфигурации магистрали укажите, что VLAN 100, 200 и 1000 могут проходить по транку.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1F05Vlans.PNG)
 
  - Сохраните текущую конфигурацию в файл загрузочной конфигурации.
-
-Картинка
-
  - Проверьте состояние транка.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1S1F05showtrunk.PNG)
 
 
 Вопрос:
@@ -165,23 +146,23 @@ Kartinka
 
  - Исключите первые пять используемых адресов из каждого пула адресов.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1Exclude.PNG)
 
  - Создайте пул DHCP (используйте уникальное имя для каждого пула).
  
- 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1PoolCreate.PNG)
  
  - Укажите сеть, поддерживающую этот DHCP-сервер.
  
- 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1PoolNetwork.PNG) 
  
  - В качестве имени домена укажите CCNA-lab.com.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1domainname.PNG)
 
  - Настройте соответствующий шлюз по умолчанию для каждого пула DHCP.
  
- 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1defrouter.PNG) 
  
  - Настройте время аренды на 2 дня 12 часов и 30 минут.
  
@@ -189,21 +170,18 @@ Kartinka
  
  - Затем настройте второй пул DHCPv4, используя имя пула R2_Client_LAN и вычислите сеть, маршрутизатор по умолчанию, и используйте то же имя домена и время аренды, что и предыдущий пул DHCP.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R1R2Pool.PNG)
 
 
 ### Шаг 2.	Сохраним конфигурацию.
-
-Картинка
- 
-
 ### Шаг 3.	Проверка конфигурации сервера DHCPv4
  - Чтобы просмотреть сведения о пуле, выполните команду show ip dhcp pool
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1ShowdhcpPool.PNG)
 
  - Выполните команду show ip dhcp bindings для проверки установленных назначений адресов DHCP.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1ShowdhcpBinding.PNG)
 
  - Выполните команду show ip dhcp server statistics для проверки сообщений DHCP.
 
@@ -212,44 +190,41 @@ Kartinka
 ### Шаг 4.	Попытка получить IP-адрес от DHCP на PC-A
  - Из командной строки компьютера PC-A выполните команду ipconfig /all.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1PCaConfigAll.PNG)
 
  - После завершения процесса обновления выполните команду ipconfig для просмотра новой информации об IP-адресе.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1PCaConfig.PNG)
 
  - Проверьте подключение с помощью пинга IP-адреса интерфейса R0 G0/0/1.
 
-Картинка
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1PCaPing.PNG)
 
 ### Часть 3.	Настройка и проверка DHCP-ретрансляции на R2
 
 #### Шаг 1.	Настройка R2 в качестве агента DHCP-ретрансляции для локальной сети на G0/0/1
  - Настройте команду ip helper-address на G0/0/1, указав IP-адрес G0/0/0 R1 и сохраним конфинг
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1R2Helper.PNG)
 
 
 
 #### Шаг 2.	Попытка получить IP-адрес от DHCP на PC-B
  - Из командной строки компьютера PC-B выполните команду ipconfig /all.
-
-
-
  - После завершения процесса обновления выполните команду ipconfig для просмотра новой информации об IP-адресе.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1PCBConfig.PNG)
 
  - Проверьте подключение с помощью пинга IP-адреса интерфейса R1 G0/0/1.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8.1PCpingR1.PNG)
 
  - Выполните show ip dhcp binding для R1 для проверки назначений адресов в DHCP.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8Topology.PNG)
 
  - Выполните команду show ip dhcp server statistics для проверки сообщений DHCP.
 
-
+Невозможно в рамках Cisco Packet Tracer
 
 
