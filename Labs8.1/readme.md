@@ -221,7 +221,7 @@ _____
 
  - Выполните show ip dhcp binding для R1 для проверки назначений адресов в DHCP.
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8Topology.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/LastBinding.PNG)
 
  - Выполните команду show ip dhcp server statistics для проверки сообщений DHCP.
 
