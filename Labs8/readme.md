@@ -109,12 +109,7 @@ ____
 
 В связи с тем, что в рамках CPT невозможно реализовать relay, реализуем DHCPv6 Statefull на R2, по анологии с R1 и посмотрим, как отработает данная реализация.
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessG000.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/R2Statefull.PNG)
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessG000.PNG)
-
-
-#### Шаг 2. Настроим R2 в качестве агента DHCP-ретрансляции для локальной сети на G0/0/1
-
- - в рамках PacketTracer нет данной функции. На работе не имеется возможности опробовать, но понял и запомнил, как выглядит/работает.
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/PCAStatefyll.PNG)
 
