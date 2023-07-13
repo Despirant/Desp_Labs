@@ -105,11 +105,14 @@ ___
 ____
 
 
-### Часть 5. Настройка и проверка ретрансляции DHCPv6 на R2.
+### Часть 5. Настройка и проверка Statefull DHCPv6 на R2.
 
-#### Шаг 1. Включим PC-B и проверьте адрес SLAAC, который он генерирует
+В связи с тем, что в рамках CPT невозможно реализовать relay, реализуем DHCPv6 Statefull на R2, по анологии с R1 и посмотрим, как отработает данная реализация.
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8PcBIpconfigAll.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessG000.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8R1StatelessG000.PNG)
+
 
 #### Шаг 2. Настроим R2 в качестве агента DHCP-ретрансляции для локальной сети на G0/0/1
 
