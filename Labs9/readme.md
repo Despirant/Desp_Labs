@@ -207,14 +207,6 @@ o	Aging time: 60 мин.
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs9S6.3.PNG)
 
-### Шаг 7. Проверьте наличие сквозного ⁪подключения.
-
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8Topology.PNG)
-
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8Topology.PNG)
-
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs8Topology.PNG)
-
 ### Вопросы для повторения
 1.	С точки зрения безопасности порта на S2, почему нет значения таймера для оставшегося возраста в минутах, когда было сконфигурировано динамическое обучение - sticky?
 У коммутатора нет поддержки данной функции/
