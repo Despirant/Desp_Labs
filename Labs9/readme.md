@@ -193,6 +193,19 @@ o	Aging time: 60 мин.
 
 ![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs9S5.6.PNG)
 
+## Примечание. Если работа выполняется в Cisco Packet Tracer, то DHCP Snooping работает не корректно. 
+Для устранения проблемы путем обходного решения вводим на коммутаторах команду 
+no ip dhcp snooping information option
+После этого проверяет получили ли ПК IP адреса. И теперь корректно  можем пропинговать все устройства в сети. 
+- результаты проверки ниже.
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs9AfterNoSnooping.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs9AfterNoSnooping2.PNG)
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs9AfterNoSnooping3.PNG)
+
+
 ### Шаг 6. Реализация PortFast и BPDU Guard
 
 - a.	Настройте PortFast на всех портах доступа, которые используются на обоих коммутаторах.
