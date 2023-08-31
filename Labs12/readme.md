@@ -2,7 +2,7 @@
 
 ## Топология
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs10Topology.PNG)
 
 ## Таблица адресации
 
@@ -33,60 +33,67 @@
  - a.	Настройте простой список доступа, который определяет, какие хосты будут разрешены для трансляции. В этом случае все устройства в локальной сети R1 имеют право на трансляцию.
  - b.	Создайте пул NAT и укажите ему имя и диапазон используемых адресов.
    
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_1.PNG)
 
 
  - c.	Настройте перевод, связывая ACL и пул с процессом преобразования.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_2.PNG)
 
  - d.	Задайте внутренний (inside) интерфейс. 
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_3.PNG)
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_4.PNG)
 
 #### Шаг 2. Проверьте и проверьте конфигурацию. 
  - a.	С PC-B,  запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните процес поиска и устранения неполадок. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_5.PNG)
 
 
 #### Вопросы:
 Во что был транслирован внутренний локальный адрес PC-B?
-Введите ваш ответ здесь.
+209.165.200.226
  
 Какой тип адреса NAT является переведенным адресом?
+Inside Global
+
+_____
  
  - b.	С PC-A, запустите  эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_6.PNG)
 
 
  - c.	Обратите внимание, что предыдущая трансляция для PC-B все еще находится в таблице. Из S1, эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_7.PNG)
 
 
  - d.	Теперь запускаем пинг R2 Lo1 из S2. На этот раз перевод завершается неудачей, и вы получаете эти сообщения (или аналогичные) на консоли R1:
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_7_NoInfo.PNG)
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12S2_PingLo.PNG)
 
 
  - e.	Это ожидаемый результат, потому что выделено только 3 адреса, и мы попытались ping Lo1 с четырех устройств. Напомним, что NAT — это трансляция «один-в-один». Как много выделено трансляций? Введите команду show ip nat translations verbose , и вы увидите, что ответ будет 24 часа.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_7_NoVerbos.PNG)
 
 Шаг 1. Удалите команду преобразования на R1.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_8.PNG)
 
 #### Шаг 2. Добавьте команду PAT на R1.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_9.PNG)
 
 #### Шаг 3. Протестируйте и проверьте конфигурацию.
  - a.	Давайте проверим, что PAT работает. С PC-B,  запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_10.PNG)
 
 
 #### Вопросы:
@@ -95,44 +102,44 @@
 В 209.165.200.228
  
 Какой тип адреса NAT является переведенным адресом?
+Inside Global
 
- 
-Чем отличаются выходные данные команды show ip nat translations из упражнения NAT?
-
-
+____
  
  - b.	С PC-A, запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_11.PNG)
 
 
  - c.	Генерирует трафик с нескольких устройств для наблюдения PAT. На PC-A и PC-B используйте параметр -t с командой ping, чтобы отправить безостановочный ping на интерфейс Lo1 R2 (ping -t 209.165.200.1), затем вернитесь к R1 и выполните команду show ip nat translations:
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_12.PNG)
 
 
 Вопрос:
 Как маршрутизатор отслеживает, куда идут ответы? 
+
+Присваиваются уникальные номера портов
  
  - d.	PAT в пул является очень эффективным решением для малых и средних организаций. Тем не менее есть неиспользуемые адреса IPv4, задействованные в этом сценарии. Мы перейдем к PAT с перегрузкой интерфейса, чтобы устранить эту трату IPv4 адресов. Остановите ping на PC-A и PC-B с помощью комбинации клавиш Control-C, затем очистите трансляции и статистику:
 
 #### Шаг 4. На R1 удалите команды преобразования nat pool.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_13.PNG)
 
 #### Шаг 5. Добавьте команду PAT overload, указав внешний интерфейс.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_14.PNG)
 
 #### Шаг 6. Протестируйте и проверьте конфигурацию. 
  - a.	Давайте проверим PAT, чтобы интерфейс работал. С PC-B,  запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_15.PNG)
 
 
  - b.	Сделайте трафик с нескольких устройств для наблюдения PAT. На PC-A и PC-B используйте параметр -t с командой ping для отправки безостановочного ping на интерфейс Lo1 R2 (ping -t 209.165.200.1). На S1 и S2 выполните привилегированную команду exec ping 209.165.200.1 повторить 2000. Затем вернитесь к R1 и выполните команду show ip nat translations.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_16.PNG)
 
 
 Теперь все внутренние глобальные адреса сопоставляются с IP-адресом интерфейса g0/0/0.
@@ -141,23 +148,25 @@
 
 #### Шаг 1. На R1 очистите текущие трансляции и статистику.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_17.PNG)
 
  
 #### Шаг 2. На R1 настройте команду NAT, необходимую для статического сопоставления внутреннего адреса с внешним адресом.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_18.PNG)
 
 #### Шаг 3. Протестируйте и проверьте конфигурацию.
  - a.	Давайте проверим, что статический NAT работает. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations, и вы увидите статическое сопоставление.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_19.PNG)
 
 
  - b.	Таблица перевода показывает, что статическое преобразование действует. Проверьте это, запустив ping  с R2 на 209.165.200.229. Плинги должны работать.
-Примечание. Возможно, вам придется отключить брандмауэр ПК для работы pings.
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R2_ping.PNG)
+
  - c.	На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations, и вы увидите статическое сопоставление и преобразование на уровне порта для входящих pings.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12R1_20.PNG)
 
 Это подтверждает, что статический NAT работает.
