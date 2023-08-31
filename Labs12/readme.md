@@ -2,7 +2,7 @@
 
 ## Топология
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs10Topology.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs12Topology.PNG)
 
 ## Таблица адресации
 
