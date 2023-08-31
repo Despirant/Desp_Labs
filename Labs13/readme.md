@@ -2,7 +2,7 @@
 
 ## Топология
 
-pic
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13topology.PNG)
 
 ## Таблица адресации
 
@@ -29,6 +29,7 @@ ____
 
  - a.	На R1 используйте соответствующую команду show cdp, чтобы определить, сколько интерфейсов включено CDP, сколько из них включено и сколько отключено.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_1.PNG)
 
 
  
@@ -38,6 +39,7 @@ ____
  
  - b.	На R1 используйте соответствующую команду show cdp, чтобы определить версию IOS, используемую на S1.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_2.PNG)
 
 
 
@@ -47,6 +49,7 @@ ____
  
  - c.	На S1 используйте соответствующую команду show cdp, чтобы определить, сколько пакетов CDP было выданных.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_3TraficNo.PNG)
 
 
 #### Вопрос:
@@ -55,12 +58,12 @@ ____
  
  - d.	Настройте SVI для VLAN 1 на S1 и S2, используя IP-адреса, указанные в таблице адресации выше. Настройте шлюз по умолчанию для каждого коммутатора на основе таблицы адресов.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_4.PNG)
 
  
  - e.	На R1 выполните команду show cdp entry S1 .
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs10Topology.PNG)
 
 #### Вопрос:
 Какие дополнительные сведения доступны теперь?
@@ -69,15 +72,20 @@ ____
 
  - f.	Отключить CDP глобально на всех устройствах. 
  
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_5.PNG)
 
 
 ### Часть 3. Обнаружение сетевых ресурсов с помощью протокола LLDP
 
  - a.	Введите соответствующую команду lldp, чтобы включить LLDP на всех устройствах в топологии.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_6.PNG)
 
 
  - b.	На S1 выполните соответствующую команду lldp, чтобы предоставить подробную информацию о S2.
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_7.PNG)
+
 
 К сожалению, LLDP enrty не работает в CPT. 
 Имеется возможность только оборазить neighbors
@@ -89,12 +97,14 @@ ____
 
  - c.	Соединитесь через консоль на всех устройствах и используйте команды LLDP, необходимые для отображения топологии физической сети только из выходных данных команды show.
 
-pic
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_8_LLDPR1.PNG)
 
  
 ### Часть 4. Настройка NTP
 
 Шаг 1. Выведите на экран текущее время.
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_9_clockdetail1.PNG)
 
 | дата  | время  | пояс  | источник  |
 |---|---|---|---|
@@ -103,15 +113,18 @@ pic
 Шаг 2. Установите время.
 С помощью команды clock set установите время на маршрутизаторе R1. Введенное время должно быть в формате UTC. 
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_9_clockSet.PNG)
  
 Шаг 3. Настройте главный сервер NTP.
 Настройте R1 в качестве хозяина NTP с уровнем слоя 4.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs10Topology.PNG)
 
  
 Шаг 4. Настройте клиент NTP.
 - a.	Выполните соответствующую команду на S1 и S2, чтобы просмотреть настроенное время. Запишите текущее время,  в следующей таблице.
+
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_9_S2clockdetail1.PNG)
 
 | Дата  | Время  | Пояс  |
 |---|---|---|
@@ -120,16 +133,18 @@ pic
 		
  - b.	Настройте S1 и S2 в качестве клиентов NTP. Используйте соответствующие команды NTP для получения времени от интерфейса G0/0/1 R1, а также для периодического обновления календаря или аппаратных часов коммутатора.
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_10.PNG)
 
 
 #### Шаг 5. Проверьте настройку NTP.
  - a.	Используйте соответствующую команду show , чтобы убедиться, что S1 и S2 синхронизированы с R1.
 
-
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_11.PNG)
 
 
  - b.	Выполните соответствующую команду на S1 и S2, чтобы просмотреть настроенное время и сравнить ранее записанное время
 
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13_12.PNG)
 
 
 #### Вопрос для повторения
