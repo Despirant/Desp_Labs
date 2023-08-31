@@ -118,7 +118,7 @@ ____
 Шаг 3. Настройте главный сервер NTP.
 Настройте R1 в качестве хозяина NTP с уровнем слоя 4.
 
-![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs10Topology.PNG)
+![](https://github.com/Despirant/Desp_Labs/blob/main/pics/Labs13NTPMA.PNG)
 
  
 Шаг 4. Настройте клиент NTP.
